@@ -23,6 +23,8 @@ class Client
 
         if ($this->config->accessToken) {
             $headers['Authorization'] = 'Bearer ' . $this->config->accessToken;
+        } elseif ($this->config->apiKey) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->apiKey;
         }
 
         if ($this->config->apiKey) {
