@@ -6,11 +6,11 @@ class Provinces extends BaseResource
 {
     public function list(array $params = []): array
     {
-        return $this->get('provinces', $params);
+        return $this->request('provinces', $params);
     }
 
-    public function find(string $id): array
+    public function get(string $id): array
     {
-        return $this->get("provinces/{$id}");
+        return $this->request("provinces/{$id}");
     }
 }

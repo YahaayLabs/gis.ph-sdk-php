@@ -12,7 +12,7 @@ abstract class BaseResource
     ) {
     }
 
-    protected function get(string $uri, array $query = []): array
+    protected function request(string $uri, array $query = []): array
     {
         $response = $this->httpClient->request('GET', ltrim($uri, '/'), [
             'query' => $query,
